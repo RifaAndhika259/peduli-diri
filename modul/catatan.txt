@@ -1,0 +1,5 @@
+19201055|Rifa Andhika|2022-03-02|18:58|Trasnstudio|23.5 Celcius
+19201055|Rifa Andhika|2022-03-02|23:48|Bioskop|34.5 Celcius
+19201055|Rifa Andhika|2022-02-28|20:47|Mall|35.2
+19201055|Rifa Andhika|2022-03-04|20:47|Wahana Bermain|35.6 Celcius
+19201022|Luqman|2022-03-02|21:08|Wahana Bermain|34.5 Celcius

