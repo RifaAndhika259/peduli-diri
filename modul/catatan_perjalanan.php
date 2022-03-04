@@ -1,4 +1,4 @@
-<div class="card">
+ <div class="card">
 <div class="card-header">
 <a href="user.php" class="btn btn-primary btn-icon-split">
         <span class="icon text-red-50 shadow-primary">
@@ -9,26 +9,25 @@
 </a>
 </div>
 
-<div class="card-body"></div>
+<div class="card-body">
 
-    <div class="container-fluid">
-      <!-- Breadcrumb-->
      <div class="row pt-2 pb-2">
         <div class="col-sm-9">
 		    <h4 class="page-title">Data Tables</h4>
-
+		   
 	   </div>
-
+	  
      </div>
     <!-- End Breadcrumb-->
+
       <div class="row">
         <div class="col-lg-12">
           <div class="card">
-            <div class="card-header"><i class="fa fa-table"></i>  Data Table Example</div>
+            <div class="card-header"><i class="fa fa-table"></i> Data Exporting</div>
             <div class="card-body">
               <div class="table-responsive">
-              <table id="default-datatable" class="table table-bordered">
-                <thead>
+              <table id="example" class="table table-bordered">
+              <thead>
                     <tr>
                         <th>NO</th>
                         <th>Tanggal</th>
@@ -73,16 +72,14 @@
 
                     ?>
                 </tbody>
-        
+
+
             </table>
             </div>
             </div>
-          </div>
+         
         </div>
       </div><!-- End Row-->
 
     </div>
-    <!-- End container-fluid-->
-    
-
- </div>
+  

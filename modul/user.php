@@ -119,7 +119,7 @@ window.location.assign('../index.php');
        <i class="icon-menu menu-icon"></i>
      </a>
     </li>
-    <p> <h4> PEDULI DIRI - Aplikasi Catatan Perjalanan </h4></p>
+    <p> <h4>Aplikasi Catatan Perjalanan </h4></p>
   </ul>
      
 

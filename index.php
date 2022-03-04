@@ -53,7 +53,7 @@
 			   </div>
 			  </div>
               <br>
-			 <button type="submit" class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-light">Sign In</button>
+			 <button type="submit" class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-light">Masuk</button>
 			  <div class="text-center pt-3">
 				<br>
 				<p class="text-muted">Belum Mempunyai Akun? <a href="modul/register.php"> Klik Disini</a></p>
