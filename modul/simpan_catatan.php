@@ -8,8 +8,9 @@ $tanggal = $_POST['tanggal'];
 $jam = $_POST['jam'];
 $lokasi = $_POST['lokasi'];
 $suhu = $_POST['suhu'];
+$id_catatan = rand(0,  100000);
 
-$format = "\n$nik|$nama_lengkap|$tanggal|$jam|$lokasi|$suhu";
+$format = "\n$id_catatan|$nik|$nama_lengkap|$tanggal|$jam|$lokasi|$suhu";
 
 //buka file catatan.txt
 $file =fopen('catatan.txt', 'a');
@@ -23,6 +24,6 @@ fclose($file);
 <script type="text/javascript">
 
     alert('Data Catatan Perjalanan Sudah Disimpan');
-    window.location.assign('user.php');
+    window.location.assign('user.php?url=catatan_perjalanan');
 
 </script>

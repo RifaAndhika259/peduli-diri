@@ -1,4 +1,6 @@
+78219|3204112309030001|Rifa Andhika|09-Mar-22|23:57|Trasnstudio|34.5 Celcius
+57729|3204112309030001|Rifa Andhika|09-Mar-22|12:15|Kebun Binatang|35.6 Celcius
 
-3204112309030001|Rifa Andhika|2022-03-04|05:12|Trasnstudio|34.5 Celcius
-3204112309030001|Rifa Andhika|2022-03-08|17:14|Mall|34.7 Celcius
-3204112309030002|Luqman|2022-03-04|07:21|Wahana Bermain|34.9 Celcius
+13534|3204112309030001|Rifa Andhika|09-Mar-22|01:13|Taman Bermain|32.9 Celcius
+94414|3204112309030001|Rifa Andhika|09-Mar-22|15:14|Bioskop|23.5 Celcius
+17768|3204112309030001|Rifa Andhika|10-Mar-22|15:26|smk mahaputra|70C

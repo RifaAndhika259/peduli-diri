@@ -13,11 +13,11 @@ foreach( $data as $value){
 
     $pecah = explode("|" , $value);
     if($nik==$pecah['0']) {
-        $tes = true;
+        $cek = true;
     }
 }
 
-if($tes){//jika nik sudah terpkai ?>
+if($cek){//jika nik sudah terpkai ?>
 <script type="text/javascript">
 alert('Maaf data NIK sudah digunakan.');
 window.location.assign('register.php');

