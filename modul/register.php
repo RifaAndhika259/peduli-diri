@@ -26,18 +26,19 @@
 <body>
  <!-- Start wrapper-->
  <div id="wrapper">
-	<div class="card border-primary border-top-sm border-bottom-sm card-authentication1 mx-auto my-5 animated bounceInDown">
-		<div class="card-body">
+	<div class="card border-primary form-control-rounded border-top-sm border-bottom-sm card-authentication1 mx-auto my-5 animated bounceInDown">
+		<div class="card-body shadow-primary form-control-rounded">
 		 <div class="card-content p-2">
 		 	<div class="text-center">
-		 		<img src="../assets/images/logo.jpg">
+		 		<img class="shadow-primary form-control-rounded" src="../assets/images/logo.jpg">
 		 	</div>
-		  <div class="card-title text-uppercase text-center py-3">Daftar Akun Baru</div>
+       <br>
+		  <div class="card-title text-uppercase text-center py-3">Daftar - Akun Peduli Diri</div>
 		    <form  method="POST" action="proses_register.php">
 			  <div class="form-group">
 			   <div class="position-relative has-icon-right">
 				  <label for="nik" class="sr-only">NIK</label>
-				  <input type="number" id="nik" name="nik"  class="form-control form-control-rounded" placeholder="Masukan NIK" required>
+				  <input type="number" maxlength="16" minlength="16" id="nik" name="nik"  class="form-control form-control-rounded shadow-primary" placeholder="Masukan NIK" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
 				  <div class="form-control-position">
 				  <span class="fa fa-address-card"></span>
 				  </div>
@@ -46,7 +47,7 @@
 			  <div class="form-group">
 			   <div class="position-relative has-icon-right">
 				  <label for="npm" class="sr-only">Nama Lengkap</label>
-				  <input type="text" id="npm" name="npm" class="form-control form-control-rounded" placeholder="Masukan Nama Lengkap" required>
+				  <input type="text" id="npm" name="npm" class="form-control form-control-rounded shadow-primary" placeholder="Masukan Nama Lengkap" required>
 				  <div class="form-control-position">
 				  <span class="fa fa-user"></span>
 				  </div>
@@ -61,12 +62,12 @@
            
             </div>
           </div>
-          <div class="col-8">
-        <a href="../index.php"><button type="button" class="btn btn-block btn-danger">Sudah Punya Akun</button></a>
+          <div class="col-7">
+        <a href="../index.php"><button type="button" class="btn btn-block  btn-danger shadow-danger form-control-rounded">Sudah Punya Akun</button></a>
       </div>
           
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+          <div class="col-5">
+            <button type="submit" class="btn  btn-primary shadow-primary btn-block form-control-rounded">Daftar</button>
           </div>
           <!-- /.col -->
         </div>

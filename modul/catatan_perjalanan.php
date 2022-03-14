@@ -1,6 +1,6 @@
- <div class="card">
-<div class="card-header">
-<a href="user.php" class="btn btn-outline-secondary btn-icon-split">
+ <div class="card shadow-primary">
+<div class="card-header ">
+<a href="user.php" class="btn btn-outline-primary shadow-primary btn-icon-split form-control-rounded">
         <span class="icon text-red-50 ">
             <i class="fa fa-arrow-left"></i>
             <span class="text" >Kembali</span>
@@ -9,7 +9,7 @@
 </a>
 </div>
 
-<div class="card-body">
+<div class="card-body  ">
 
      <div class="row pt-2 pb-2">
         <div class="col-sm-9">
@@ -20,34 +20,23 @@
      </div>
     <!-- End Breadcrumb-->
 
-      <div class="row">
+      <div class="row ">
         <div class="col-lg-12">
-          <div class="card">
-            <div class="card-header"><i class="fa fa-table"></i> List Catatan Perjalanan</div>
+          <div class="card form-control-rounded shadow-primary ">
+            <div class="card-header form-control-rounded"><i class="fa fa-table"></i><b> List Catatan Perjalanan</b></div>
             <div class="card-body">
               <div class="table-responsive">
-              <table id="example" class="table table-hover table-bordered">
+              <table id="example" class="table table-hover table-bordered shadow-primary form-control-rounded ">
               <thead>
                     <tr>
-                        <th>NO</th>
-                        <th>Tanggal</th>
-                        <th>Jam</th>
-                        <th>Lokasi</th>
-                        <th>Suhu Tubuh</th>
-                        <th>Aksi</th>
+                        <th><b> NO</th>
+                        <th><b> Tanggal</th>
+                        <th><b> Jam</th>
+                        <th><b> Lokasi</th>
+                        <th><b> Suhu Tubuh</th>
+                        <th><center><b> Aksi </center></th>
                     </tr>
                 </thead>
-
-                <tfoot>
-                <tr>
-                        <th>NO</th>
-                        <th>Tanggal</th>
-                        <th>Jam</th>
-                        <th>Lokasi</th>
-                        <th>Suhu Tubuh</th>
-                        <th>Aksi</th>
-                    </tr>
-                </tfoot>
 
                 <tbody>
         
@@ -63,21 +52,21 @@
                     ?>
                         <tr>
 
-                        <td><?= $no++; ?></td>
-                        <td><?= $pecah['3']; ?></td>
-                        <td><?= $pecah['4']; ?></td>
-                        <td><?= $pecah['5']; ?></td>
-                        <td><?= $pecah['6']; ?></td>
-                        <td> 
-                          <a href="?url=edit_catatan&id_catatan=<?= $pecah['0']?>"  class="btn btn-outline-secondary">
+                        <td><b><?= $no++; ?></td>
+                        <td><b><?= $pecah['3']; ?></td>
+                        <td><b><?= $pecah['4']; ?></td>
+                        <td><b><?= $pecah['5']; ?></td>
+                        <td><b><?= $pecah['6']; ?></td>
+                        <td> <center>
+                          <a href="?url=edit_catatan&id_catatan=<?= $pecah['0']?>"  class="btn btn-outline-primary shadow-primary form-control-rounded">
                           <i class="icon-note"></i> Edit
                         </a>
 
                         <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')" 
-                        href="hapus_catatan.php?&id_catatan=<?= $pecah['0']?>"  class="btn btn-outline-danger">
+                        href="hapus_catatan.php?&id_catatan=<?= $pecah['0']?>"  class="btn btn-outline-danger shadow-danger form-control-rounded">
                           <i class="icon-trash"></i> Hapus
                         </a>
-
+                        </center>
                         </td>
 
                         </tr>
@@ -90,8 +79,9 @@
             </table>
             </div>
             </div>
-         
+         <br><br><br>
         </div>
+      
       </div><!-- End Row-->
 
     </div>

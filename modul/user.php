@@ -52,21 +52,22 @@ window.location.assign('../index.php');
  <div id="wrapper">
  
   <!--Start sidebar-wrapper-->
-   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true" >
-     <div class="btn-outline-dark">
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true" class="gradient-scooter">
+     <div class="btn-outline-primary">
       <a href="user.php">
         <p></p>  
-       <img src="../assets/images/logo.jpg" class="logo-icon" alt="logo icon">   <h3 class="logo-text">Peduli Diri</h3>  
+      <img src="../assets/images/logo.jpg" class="logo-icon  gradient-scooter form-control-rounded " alt="logo icon">   <h3 class="logo-text"><b>Peduli Diri</b></h3>  
     
       </a>
+      
 	 </div>
-   <hr>
+ <hr>
 <br><br><br>
-	 <ul class="sidebar-menu do-nicescrol bg-outline-secondary">
-
+	 <ul class="sidebar-menu do-nicescrol  ">
+<hr>
       <li>
         <a href="user.php" class="waves-effect">
-        <button type="button" class="col-10 btn btn-outline-primary"><i class="icon-home"></i>Beranda</button>
+        <button type="button" class="col-10 btn  gradient-scooters shadow-primary form-control-rounded"><i class="icon-home"></i>Beranda</button>
 
         </a>
 
@@ -76,7 +77,7 @@ window.location.assign('../index.php');
  
       <li>
         <a href="?url=tulis_catatan" class="waves-effect">
-           <button type="button" class="col-10 btn btn-outline-primary"><i class="icon-note"></i>Isi  Catatan</button>  
+           <button type="button" class="col-10 btn  gradient-scooters shadow-primary form-control-rounded"><i class="icon-note"></i>Isi  Catatan</button>  
           
         </a>
   
@@ -87,7 +88,7 @@ window.location.assign('../index.php');
 
       <li>
         <a href="?url=catatan_perjalanan" class="waves-effect">
-        <button type="button" class="col-10 btn btn-outline-primary"><i class="icon-folder"></i>List Catatan</button>  
+        <button type="button" class="col-10 btn gradient-scooters shadow-primary form-control-rounded"><i class="icon-list"></i>List Catatan</button>  
         </a>
   
       </li>
@@ -98,10 +99,11 @@ window.location.assign('../index.php');
 
       <li>
         <a href="../modul/logout.php" class="waves-effect">
-        <button type="button" class="btn btn-outline-danger"><i class="icon-logout"></i>Logout</button> 
+        <button type="button" class="col-10 btn btn-danger form-control-rounded shadow-danger"><i class="icon-logout"></i>Keluar</button> 
         </a>
   
       </li>
+      <hr>    
     </ul>
 
    </div>
@@ -109,7 +111,7 @@ window.location.assign('../index.php');
 
 <!--Start topbar header-->
 <header class="topbar-nav">
- <nav class="navbar navbar-expand fixed-top bg-secondary">
+ <nav class="navbar navbar-expand fixed-top  bg-primary shadow-primary gradient-scooter">
   <ul class="navbar-nav mr-auto align-items-center">
     <li class="nav-item">
       <a class="nav-link toggle-menu" href="javascript:void();">
@@ -161,9 +163,9 @@ window.location.assign('../index.php');
        
             
             echo "<br> <br>";
-            echo "<center><h3>Selamat Datang Di Aplikasi Peduli Diri</h3></center>";
-            echo "<center><img src='../assets/images/logo.jpg' width='250' height='250' /></center>";
-            echo "<center><br><br><b> Anda Login Sebagai :</b><br></center>";
+            echo "<center><h3 >Selamat Datang Di Aplikasi Peduli Diri</h3></center><br><br>";
+            echo "<center><img src='../assets/images/logo.jpg' class='shadow-primary form-control-rounded ' width='250' height='250' /></center>";
+            echo "<center><br><br><b class='shadow-primary '> Anda Login Sebagai :</b><br></center>";
             echo "<center><h4>".$_SESSION['npm']. "</h4> </center>";
 
           }
@@ -193,9 +195,9 @@ window.location.assign('../index.php');
     <!--End Back To Top Button-->
 	
 	<!--Start footer-->
-	<footer class="footer">
+	<footer class="footer shadow-primary">
       <div class="container">
-        <div class="text-center">
+        <div class="text-center form-control-rounded  shadow-primary">
           Aplikasi Peduli Diri | 2022
         </div>
       </div>

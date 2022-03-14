@@ -12,12 +12,12 @@ $data = file("config.txt", FILE_IGNORE_NEW_LINES);
 foreach( $data as $value){
 
     $pecah = explode("|" , $value);
-    if($nik==$pecah['0']) {
-        $cek = true;
-    }
+    // if($nik==$pecah['0']) {
+    //     $cek = true;
+    // }
 }
 
-if($cek){//jika nik sudah terpkai ?>
+if(in_array($nik, $pecah)){//jika nik sudah terpkai ?>
 <script type="text/javascript">
 alert('Maaf data NIK sudah digunakan.');
 window.location.assign('register.php');
