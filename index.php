@@ -38,7 +38,7 @@
 			  <div class="form-group">
 			   <div class="position-relative has-icon-right">
 				  <label for="nik" class="sr-only">NIK</label>
-				  <input type="number" id="nik" name="nik" class="form-control form-control-rounded shadow-primary"  placeholder="Masukan NIK" required>
+				  <input type="number" maxlength="16" minlength="16" id="nik" name="nik"  class="form-control form-control-rounded shadow-primary" placeholder="Masukan NIK" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
 				  <div class="form-control-position">
 				  <span class="fa fa-address-card"></span>
 				  </div>
