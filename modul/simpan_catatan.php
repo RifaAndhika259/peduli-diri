@@ -19,11 +19,6 @@ fwrite($file, $format);
 //tutup file catatantxt
 fclose($file);
 
+$_SESSION['success'] = 'Catatan Berhasil di tambahkan';
+header('Location: user.php?url=catatan_perjalanan');
 ?>
-
-<script type="text/javascript">
-
-    alert('Data Catatan Perjalanan Sudah Disimpan');
-    window.location.assign('user.php?url=catatan_perjalanan');
-
-</script>

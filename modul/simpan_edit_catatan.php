@@ -26,11 +26,8 @@ $format = "$id_catatan|$nik|$nama_lengkap|$tanggal|$jam|$lokasi|$suhu";
     $data = implode("\n", $data);
     file_put_contents('catatan.txt', $data);
 
+
+    $_SESSION['success'] = 'Catatan Berhasil diubah';
+header('Location: user.php?url=catatan_perjalanan');
+
 ?>
-
-<script type="text/javascript">
-
-    alert('Data Catatan Perjalanan Sudah Diubah');
-    window.location.assign('user.php?url=catatan_perjalanan');
-
-</script>

