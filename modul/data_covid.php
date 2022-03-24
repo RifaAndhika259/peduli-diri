@@ -1,53 +1,62 @@
+<center class=" mx-auto animated bounceInRight"><h2><b>Risiko COVID-19 Seluruh Provinsi Indonesia, <br> Tiap Kota </b></h2></center>
+<hr>
 <?php
 
-$api_url = 'https://data.covid19.go.id/public/api/prov.json';
+$connected = @fopen("https://data.covid19.go.id/public/api/skor.json", 'r');
+if($connected){
+
+$api_url = 'https://data.covid19.go.id/public/api/skor.json';
 $json_data = file_get_contents($api_url);
 $response_data = json_decode($json_data);
-$data = $response_data->list_data;
+$data = $response_data->data;
 ?>
-<center><h2><b>DATA COVID-19 TIAP PROVINSI</b></h2></center>
-
 <br>
-<div class="row">
+<div class="row ">
 	<?php foreach ($data as $item) { 	?>
 		<div class="col-lg-4">
 			<div class="card card-widget widget-user shadow-primary form-control-rounded mx-auto animated bounceInRight">
 				<!-- Add the bg color to the header using any of the bg-* classes -->
 				<div class="widget-user-header">
 					<h5 class="widget-user-username text-center text-dark">
-						<b><?= $item->key ?></b>
+						<b><?= $item->prov ?></b>
 					</h5>
 				</div>
 				<div class="card-footer">
 					<div class="row">
-						<div class="col-sm-4 border-right">
+						<div class="col-sm-6 border-left">
 							<div class="description-block">
-								<h5 class="description-header"><?= $item->jumlah_kasus ?></h5>
-								<span class="description-text">Jumlah kasus</span>
+							<span class="description-text">Nama Kota</span>
+							<br>
+								<h6 class="description-header "><?= $item->kota ?></h6>
+								
 							</div>
 							<!-- /.description-block -->
 						</div>
 						<!-- /.col -->
-						<div class="col-sm-4 border-right">
+						<div class="col-sm-6 border-left">
 							<div class="description-block">
-								<h5 class="description-header"><?= $item->jumlah_sembuh ?></h5>
-								<span class="description-text">Jumlah sembuh</span>
+							<span class="description-text text-primary">Risiko Covid-19</span>
+							<br><hr>
+								<h6 class="description-header text-danger "><?= $item->hasil ?></h6>
+								
 							</div>
 							<!-- /.description-block -->
 						</div>
 						<!-- /.col -->
-						<div class="col-sm-4">
-							<div class="description-block">
-								<h5 class="description-header"><?= $item->jumlah_dirawat ?></h5>
-								<span class="description-text">Jumlah dirawat</span>
-							</div>
-							<!-- /.description-block -->
-						</div>
+				
 						<!-- /.col -->
 					</div>
 					<!-- /.row -->
 				</div>
 			</div>
 		</div>
-	<?php }  ?>
+
+		<?php }  ?>
+<?php } ?>
+
+<div class="row">
+	<?php if(!$connected){ 
+		$_SESSION['server'] = "Kesalahan pada server, pastikan terkoneksi dengan internet";
+	}?>
 </div>
+	</div>

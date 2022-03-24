@@ -250,7 +250,7 @@ window.location.assign('../index.php');
 
        var table = $('#example').DataTable( {
         lengthChange: false,
-        buttons: [ 'copy', 'excel', 'pdf', 'print', 'colvis' ]
+        buttons: [ 'copy', 'excel', 'pdf', 'print']
       } );
  
      table.buttons().container()
@@ -273,6 +273,13 @@ window.location.assign('../index.php');
       swal("Kesalahan!", "<?= $_SESSION['error']; ?>", "error");
     </script>
     <?php unset($_SESSION['error']); } ?>
+
+    <?php if(isset($_SESSION['server'])) { ?>
+    <script>
+      swal("Kesalahan!", "<?= $_SESSION['server']; ?>", "error");
+    </script>
+    <?php unset($_SESSION['server']); } ?>
+
 
 
 
