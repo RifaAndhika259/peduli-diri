@@ -1,4 +1,4 @@
- <div class="card shadow-primary form-control-rounded">
+<div class="card shadow-primary form-control-rounded">
 <div class="card-header form-control-rounded ">
 
 </div>
@@ -13,14 +13,13 @@
 	  
      </div>
     <!-- End Breadcrumb-->
-
       <div class="row ">
         <div class="col-lg-12">
           <div class="card form-control-rounded shadow-primary mx-auto animated bounceInDown">
             <div class="card-header form-control-rounded"><i class="fa fa-table"></i><b> List Catatan Perjalanan</b></div>
             <div class="card-body">
               <div class="table-responsive">
-              <table id="default-datatable" class="table table-hover table-bordered shadow-primary form-control-rounded ">
+              <table id="example" class="table table-hover table-bordered shadow-primary form-control-rounded ">
               <thead> 
                     <tr>
                         <th><b> NO</th>
@@ -28,7 +27,6 @@
                         <th><b> Jam</th>
                         <th><b> Lokasi</th>
                         <th><b> Suhu Tubuh</th>
-                        <th><center><b> Aksi </center></th>
                     </tr>
                 </thead>
 
@@ -51,17 +49,6 @@
                         <td><b><?= $cracked['4']; ?></td>
                         <td><b><?= $cracked['5']; ?></td>
                         <td><b><?= $cracked['6']; ?> &#8451</td>
-                        <td> <center>
-                          <a href="?url=edit_catatan&id_catatan=<?= $cracked['0']?>"  class="btn btn-outline-primary shadow-primary form-control-rounded  mx-auto animated bounceInRight">
-                          <i class="icon-note"></i> Edit
-                        </a>
-
-                        <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')" 
-                        href="proses_hapus_catatan.php?&id_catatan=<?= $cracked['0']?>"  class="btn btn-outline-danger shadow-danger form-control-rounded  mx-auto animated bounceInRight">
-                          <i class="icon-trash"></i> Hapus
-                        </a>
-                        </center>
-                        </td>
 
                         </tr>
                <?php } } 
@@ -79,7 +66,6 @@
       </div><!-- End Row-->
 
     </div>
-    
 
     <!-- Button trigger modal -->
 

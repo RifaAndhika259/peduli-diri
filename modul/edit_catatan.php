@@ -1,3 +1,5 @@
+
+
 <div class="card-body "></div>
 <div class="row">
 			<div class="col-lg-7 mx-auto">
@@ -9,29 +11,29 @@
 				   $data = file('catatan.txt', FILE_IGNORE_NEW_LINES);
 				   $id_catatan = $_GET['id_catatan'];
 				   foreach($data as $value) {
-					$pecah = explode('|', $value);
-					if($pecah['0']==$id_catatan){
+					$cracked = explode('|', $value);
+					if($cracked['0']==$id_catatan){
 						?>
-				    <form action="simpan_edit_catatan.php" method="POST">
-						<input type="hidden" name="id_catatan" value="<?= $pecah['0'] ?>">
+				    <form action="proses_simpan_edit_catatan.php" method="POST">
+						<input type="hidden" name="id_catatan" value="<?= $cracked['0'] ?>">
 					 <div class="form-group">
 					  <label for="">Pilih Tanggal</label>
-					  <input value="<?= $pecah['3'] ?>" type="text" name="tanggal" class="form-control form-control-rounded  mx-auto animated bounceInRight" id="tanggal" placeholder="Masukan Tanggal" required value="<?= date('d-M-y'); ?>" >
+					  <input value="<?= $cracked['3'] ?>" type="text" name="tanggal" class="form-control form-control-rounded  mx-auto animated bounceInRight" id="tanggal" placeholder="Masukan Tanggal" required value="<?= date('d-M-y'); ?>" >
 					 </div>
 
                      <div class="form-group">
 					  <label for="">Pilih Jam</label>
-					  <input value="<?= $pecah['4'] ?>" type="time" name="jam" class="form-control form-control-rounded  mx-auto animated bounceInRight" id="jam" placeholder="Masukan Jam" required>
+					  <input value="<?= $cracked['4'] ?>" type="time" name="jam" class="form-control form-control-rounded  mx-auto animated bounceInRight" id="jam" placeholder="Masukan Jam" required>
 					 </div>
 
                      <div class="form-group">
 					  <label for="">Pilih Lokasi</label>
-					  <input value="<?= $pecah['5'] ?>" type="text" name="lokasi" class="form-control form-control-rounded  mx-auto animated bounceInRight" id="lokasi" placeholder="Masukan Lokasi" required>
+					  <input value="<?= $cracked['5'] ?>" type="text" name="lokasi" class="form-control form-control-rounded  mx-auto animated bounceInRight" id="lokasi" placeholder="Masukan Lokasi" required>
 					 </div>
 
                      <div class="form-group">
 					  <label for="">Suhu Tubuh</label>
-					  <input value="<?= $pecah['6'] ?>" type="text" name="suhu" class="form-control form-control-rounded  mx-auto animated bounceInRight" id="suhu" placeholder="Masukan Suhu" required>
+					  <input value="<?= $cracked['6'] ?>" maxlength="5" minlength="5" required type="text" name="suhu" class="suhu_tubuh form-control form-control-rounded  mx-auto animated bounceInRight" id="suhu" placeholder="Masukan Suhu" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
 					 </div>
 
 <br>

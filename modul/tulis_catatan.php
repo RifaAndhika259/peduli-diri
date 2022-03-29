@@ -1,13 +1,8 @@
-<div class="card shadow-primary">
-<div class="card-header">
-<a href="user.php" class="btn btn-outline-primary shadow-primary btn-icon-split form-control-rounded  mx-auto animated bounceInRight">
-        <span class="icon text-red-50">
-            <i class="fa fa-arrow-left"></i>
-            <span class="text" >Kembali</span>
-        </span> 
+<div class="card shadow-primary form-control-rounded">
+<div class="card-header form-control-rounded ">
 
-</a>
 </div>
+
 <div class="card-body"></div>
 <div class="row">
 			<div class="col-lg-7 mx-auto">
@@ -15,7 +10,7 @@
 			     <div class="card-body">
 				   <div class="card-title">Isi Catatan Perjalanan</div>
 				   <hr>
-				    <form action="simpan_catatan.php" method="POST">
+				    <form action="proses_simpan_catatan.php" method="POST">
 					 <div class="form-group">
 					  <label for="">Pilih Tanggal</label>
 					  <input type="text" name="tanggal" class="form-control form-control-rounded  mx-auto animated bounceInRight " id="tanggal" placeholder="Masukan Tanggal" required value="<?= date('d-M-y'); ?>" >
@@ -33,7 +28,7 @@
 
                      <div class="form-group">
 					  <label for="">Suhu Tubuh</label>
-					  <input type="text" name="suhu" class="form-control form-control-rounded  mx-auto animated bounceInRight " id="suhu" placeholder="Masukan Suhu" required>
+					  <input type="text" maxlength="5" autocomplete="off" min="5" name="suhu" required class=" suhu_tubuh form-control form-control-rounded  mx-auto animated bounceInRight " id="suhu" placeholder="Masukan Suhu" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
 					 </div>
 <br>
 

@@ -16,8 +16,8 @@ $format = "$id_catatan|$nik|$nama_lengkap|$tanggal|$jam|$lokasi|$suhu";
     $data = file('catatan.txt', FILE_IGNORE_NEW_LINES);
     foreach($data as $value){
         $no++;
-        $pecah =explode('|', $value);
-        if($pecah['0']==$id_catatan){
+        $cracked =explode('|', $value);
+        if($cracked['0']==$id_catatan){
             $line = $no-1;
         }
     }

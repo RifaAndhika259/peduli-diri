@@ -61,11 +61,8 @@ window.location.assign('../index.php');
       </a>
       
 	 </div>
-   <br>
-
-<br><br>
 	 <ul class="sidebar-menu do-nicescrol mx-auto animated bounceInRight ">
-<hr>
+     <hr>
       <li>
         <a href="user.php" class="waves-effect">
         <button type="button" class="col-10 btn  gradient-scooters shadow-primary form-control-rounded"><i class="icon-home"></i>Beranda</button>
@@ -99,7 +96,17 @@ window.location.assign('../index.php');
 
     <li>
         <a href="?url=data_covid" class="waves-effect">
-        <button type="button" class="col-10 btn gradient-scooters shadow-primary form-control-rounded"><i class="icon-list"></i>Data Covid-19</button>  
+        <button type="button" class="col-10 btn gradient-scooters shadow-primary form-control-rounded"><i class="icon-list"></i>Risiko Covid-19</button>  
+        </a>
+  
+      </li>
+
+      
+    <hr>
+
+    <li>
+        <a href="?url=fitur_tambahan" class="waves-effect">
+        <button type="button" class="col-10 btn gradient-scooters shadow-primary form-control-rounded"><i class="icon-folder"></i>Ekspor Data</button>  
         </a>
   
       </li>
@@ -168,6 +175,10 @@ window.location.assign('../index.php');
                   case 'data_covid';
                 include 'data_covid.php';
                   break;
+
+                  case 'fitur_tambahan';
+                  include 'fitur_tambahan.php';
+                  break;
               
               default:
                 echo "Halaman Tidak Ditemukan ";
@@ -177,11 +188,12 @@ window.location.assign('../index.php');
           }else{
        
             
-            echo "<br> <br>";
-            echo "<center><h3 class='mx-auto animated bounceInDown'>Selamat Datang Di Aplikasi Peduli Diri</h3></center><br><br>";
+
+            echo "<center><h3 class='mx-auto animated  bounceInDown'>Selamat Datang Di Aplikasi Peduli Diri</h3></center><br><br>";
             echo "<center><img src='../assets/images/logo.jpg' class='shadow-primary form-control-rounded mx-auto animated bounceInDown' width='250' height='250' /></center>";
             echo "<center><br><br><b class='shadow-primary mx-auto animated bounceInDown'> Anda Login Sebagai :</b><br></center>";
             echo "<center><h4 class='mx-auto animated bounceInDown'>".$_SESSION['npm']. "</h4> </center>";
+            echo "</div>";
 
           }
 
@@ -241,6 +253,11 @@ window.location.assign('../index.php');
   <script src="../assets/plugins/bootstrap-datatable/js/buttons.html5.min.js"></script>
   <script src="../assets/plugins/bootstrap-datatable/js/buttons.print.min.js"></script>
   <script src="../assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
+
+<script src="../assets/plugins/inputmask/jquery.inputmask.min.js"></script>
+<script> $('.suhu_tubuh').inputmask("decimal", {
+  rightAlign: false
+});</script>
 
     <script>
      $(document).ready(function() {
