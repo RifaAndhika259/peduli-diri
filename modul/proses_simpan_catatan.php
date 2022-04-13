@@ -12,11 +12,10 @@ $id_catatan = rand(0,  100000);
 
 $format = "\n$id_catatan|$nik|$nama_lengkap|$tanggal|$jam|$lokasi|$suhu";
 
-//buka file catatan.txt
 $file =fopen('catatan.txt', 'a');
 fwrite($file, $format);
 
-//tutup file catatantxt
+
 fclose($file);
 
 $_SESSION['success'] = 'Catatan Berhasil di tambahkan';

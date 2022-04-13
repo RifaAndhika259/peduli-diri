@@ -27,14 +27,16 @@
 					 </div>
 
                      <div class="form-group">
-					  <label for="">Suhu Tubuh</label>
-					  <input type="text" maxlength="5" autocomplete="off" min="5" name="suhu" required class=" suhu_tubuh form-control form-control-rounded  mx-auto animated bounceInRight " id="suhu" placeholder="Masukan Suhu" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
+					  <label for="">Suhu Tubuh
+						 
+					  </label>
+					  <input type="number" step="any" max="45" min="20" autocomplete="off" name="suhu" required class=" suhu_tubuh form-control form-control-rounded  mx-auto animated bounceInRight " id="suhu" placeholder="Masukan Suhu" >
 					 </div>
 <br>
 
 					 <div class="form-group">
 					  <button type="submit" class="btn btn btn-outline-primary shadow-primary form-control-rounded  mx-auto animated bounceInRight px-5"><i class="fa fa-save"></i> Simpan</button>
-                      <a href="user.php?url=tulis_catatan"><button type="button" class="btn btn btn-outline-danger shadow-danger form-control-rounded  mx-auto animated bounceInRight px-5"><i class="fa fa-trash"></i> Batal</button></a>
+                      <button type="reset" class="btn btn btn-outline-danger shadow-danger form-control-rounded  mx-auto animated bounceInRight px-5"><i class="fa fa-trash"></i> Batal</button>
 					</div>
 					</form>
 					<br>

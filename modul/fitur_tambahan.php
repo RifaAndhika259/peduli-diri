@@ -48,7 +48,7 @@
                         <td><b><?= $cracked['3']; ?></td>
                         <td><b><?= $cracked['4']; ?></td>
                         <td><b><?= $cracked['5']; ?></td>
-                        <td><b><?= $cracked['6']; ?> &#8451</td>
+                        <td><b><?= $cracked['6']; ?> °C</td>
 
                         </tr>
                <?php } } 

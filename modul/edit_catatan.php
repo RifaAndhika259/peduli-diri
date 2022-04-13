@@ -33,7 +33,7 @@
 
                      <div class="form-group">
 					  <label for="">Suhu Tubuh</label>
-					  <input value="<?= $cracked['6'] ?>" maxlength="5" minlength="5" required type="text" name="suhu" class="suhu_tubuh form-control form-control-rounded  mx-auto animated bounceInRight" id="suhu" placeholder="Masukan Suhu" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
+					  <input value="<?= $cracked['6'] ?>"type="number" step="any" max="45" min="20" name="suhu" class="suhu_tubuh form-control form-control-rounded  mx-auto animated bounceInRight" id="suhu" placeholder="Masukan Suhu">
 					 </div>
 
 <br>

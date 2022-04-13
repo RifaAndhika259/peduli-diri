@@ -50,7 +50,7 @@
                         <td><b><?= $cracked['3']; ?></td>
                         <td><b><?= $cracked['4']; ?></td>
                         <td><b><?= $cracked['5']; ?></td>
-                        <td><b><?= $cracked['6']; ?> &#8451</td>
+                        <td><b><?= $cracked['6']; ?> °C</td>
                         <td> <center>
                           <a href="?url=edit_catatan&id_catatan=<?= $cracked['0']?>"  class="btn btn-outline-primary shadow-primary form-control-rounded  mx-auto animated bounceInRight">
                           <i class="icon-note"></i> Edit

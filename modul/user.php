@@ -136,7 +136,7 @@ window.location.assign('../index.php');
        <i class="icon-menu menu-icon"></i>
      </a>
     </li>
-    <p> <h4 class="text-white mx-auto animated bounceInRight">Aplikasi Catatan Perjalanan </h4></p>
+    <p> <h4 class="text-white mx-auto animated bounceInRight">Mempermudah Catatan Perjalanan Anda </h4></p>
   </ul>
      
 

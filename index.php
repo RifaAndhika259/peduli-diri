@@ -82,7 +82,7 @@ session_start();
           
             <center>
             <div class="col-11  shadow-danger form-control-rounded">
-        Pastikan Ukuran Huruf Nama Sama, Dengan Saat Anda Register!!!
+            Pastikan besar kecil huruf sesuai saat registrasi
           </div>
           </center>
          

@@ -57,6 +57,8 @@ $data = $response_data->data;
 <div class="row">
 	<?php if(!$connected){ 
 		$_SESSION['server'] = "Kesalahan pada server, pastikan terkoneksi dengan internet";
+		echo  '<br><br>';
+		echo ' <center><h3>Kesalahan pada server! </h3></center>';
 	}?>
 </div>
 	</div>
