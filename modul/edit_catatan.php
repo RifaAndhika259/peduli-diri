@@ -18,7 +18,7 @@
 						<input type="hidden" name="id_catatan" value="<?= $cracked['0'] ?>">
 					 <div class="form-group">
 					  <label for="">Pilih Tanggal</label>
-					  <input value="<?= $cracked['3'] ?>" type="text" name="tanggal" class="form-control form-control-rounded  mx-auto animated bounceInRight" id="tanggal" placeholder="Masukan Tanggal" required value="<?= date('d-M-y'); ?>" >
+					  <input value="<?= $cracked['3'] ?>" type="date" name="tanggal" class="form-control form-control-rounded  mx-auto animated bounceInRight" id="tanggal" placeholder="Masukan Tanggal" required value="<?= date('d/M/y'); ?>" >
 					 </div>
 
                      <div class="form-group">

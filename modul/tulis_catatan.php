@@ -13,7 +13,7 @@
 				    <form action="proses_simpan_catatan.php" method="POST">
 					 <div class="form-group">
 					  <label for="">Pilih Tanggal</label>
-					  <input type="text" name="tanggal" class="form-control form-control-rounded  mx-auto animated bounceInRight " id="tanggal" placeholder="Masukan Tanggal" required value="<?= date('d-M-y'); ?>" >
+					  <input type="date" name="tanggal" class="form-control form-control-rounded  mx-auto animated bounceInRight " id="tanggal" placeholder="Masukan Tanggal" required value="<?= date('d-M-y'); ?>" >
 					 </div>
 
                      <div class="form-group">
